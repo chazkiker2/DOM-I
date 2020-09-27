@@ -38,5 +38,16 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// * My Code Starts Below
+
+// Header 
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = "../img/header-img.png"
+
+const nav = document.querySelector('nav');
+const aEls = nav.childNodes;
+
+

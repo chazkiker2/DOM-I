@@ -69,8 +69,31 @@ button.textContent = siteContent.cta.button;
 // > Main content
 
 //  Top content
-const topContent = document.querySelector('.top-content');
-console.log(topContent);
-// const topDiv = topContent.childNodes;
-// console.log(topDiv);
+const topContent = document.querySelector('.top-content').children;
+const topDiv1 = topContent[0].children;
+
+// Features Section
+topDiv1[0].innerHTML = siteContent["main-content"]["features-h4"];
+topDiv1[1].innerHTML = siteContent["main-content"]["features-content"];
+
+// About Section
+const topDiv2 = topContent[1].children;
+topDiv2[0].innerHTML = siteContent["main-content"]["about-h4"];
+topDiv2[1].innerHTML = siteContent["main-content"]["about-content"];
+
+// Middle-Img
+const imgEl = document.querySelector('.middle-img');
+imgEl.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Bottom content
+const bottomContent = document.querySelector('.bottom-content').children;
+bottomContent[0].children[0].innerHTML = siteContent["main-content"]["services-h4"];
+bottomContent[0].children[1].innerHTML = siteContent["main-content"]["services-content"];
+bottomContent[1].children[0].innerHTML = siteContent["main-content"]["product-h4"];
+bottomContent[1].children[1].innerHTML = siteContent["main-content"]["product-content"];
+bottomContent[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
+bottomContent[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
+
+
+
 

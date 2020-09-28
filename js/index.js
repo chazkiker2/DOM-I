@@ -59,5 +59,7 @@ const titleText = siteContent.cta.h1.split(" ");
 const titleHtml = `${titleText[0]} <br /> ${titleText[1]} <br /> ${titleText[2]}`;
 h1El.innerHTML = titleHtml;
 
-
+// button "get started"
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
 

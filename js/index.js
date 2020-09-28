@@ -94,6 +94,14 @@ bottomContent[1].children[1].innerHTML = siteContent["main-content"]["product-co
 bottomContent[2].children[0].innerHTML = siteContent["main-content"]["vision-h4"];
 bottomContent[2].children[1].innerHTML = siteContent["main-content"]["vision-content"];
 
+// Contact Section
+const contactSection = document.querySelector('section.contact').children;
+contactSection[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactSection[1].innerHTML = siteContent["contact"]["address"];
+contactSection[2].innerHTML = siteContent["contact"]["phone"];
+contactSection[3].innerHTML = siteContent["contact"]["email"];
 
-
+// footer Copyright
+const footer = document.querySelector('footer').children;
+footer[0].innerHTML = siteContent["footer"]["copyright"];
 

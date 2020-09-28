@@ -43,17 +43,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // * My Code Starts Below
 
-// Header 
+// header-img 
 const ctaImg = document.querySelector('#cta-img');
-ctaImg.src = "../img/header-img.png"
+ctaImg.src = siteContent.cta["img-src"];
 
-const nav = document.querySelector('nav');
+// navbar
 const aEls = document.querySelectorAll('a');
-const navContent = siteContent.nav;
-aEls[0].textContent = navContent["nav-item-1"];
-aEls[1].textContent = navContent["nav-item-2"];
-aEls[2].textContent = navContent["nav-item-3"];
-aEls[3].textContent = navContent["nav-item-4"];
-aEls[4].textContent = navContent["nav-item-5"];
-aEls[5].textContent = navContent["nav-item-6"];
+for (let i=0; i<aEls.length; i++) {
+  aEls[i].textContent = siteContent.nav[`nav-item-${i+1}`];
+}
+
+// Title text
+const h1El = document.querySelector('h1');
+const titleText = siteContent.cta.h1.split(" ");
+const titleHtml = `${titleText[0]} <br /> ${titleText[1]} <br /> ${titleText[2]}`;
+h1El.innerHTML = titleHtml;
+
+
 

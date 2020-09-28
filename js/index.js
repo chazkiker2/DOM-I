@@ -96,8 +96,10 @@ bottomContent[2].children[1].innerHTML = siteContent["main-content"]["vision-con
 
 // Contact Section
 const contactSection = document.querySelector('section.contact').children;
+const splitAddress = siteContent["contact"]["address"].split(" ");
+splitAddress.splice(4, 0, "<br />");
 contactSection[0].innerHTML = siteContent["contact"]["contact-h4"];
-contactSection[1].innerHTML = siteContent["contact"]["address"];
+contactSection[1].innerHTML = splitAddress.join(" ");
 contactSection[2].innerHTML = siteContent["contact"]["phone"];
 contactSection[3].innerHTML = siteContent["contact"]["email"];
 

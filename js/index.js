@@ -41,7 +41,10 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 // * My Code Starts Below
+
+// > Nav & Header
 
 // header-img 
 const ctaImg = document.querySelector('#cta-img');
@@ -62,4 +65,12 @@ h1El.innerHTML = titleHtml;
 // button "get started"
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
+
+// > Main content
+
+//  Top content
+const topContent = document.querySelector('.top-content');
+console.log(topContent);
+// const topDiv = topContent.childNodes;
+// console.log(topDiv);
 
